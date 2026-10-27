@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#8cff00">
+<title>Ben 10 Classic — Omnitrix Archive</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="Ben 10 Classic home"><span class="omnitrix">✦</span><span>BEN <b>10</b><small>CLASSIC ARCHIVE</small></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+  <nav id="nav">
+    <a href="#home">Home</a><a href="#characters">Characters</a><a href="#aliens">Aliens</a><a href="#lore">Omnitrix & Lore</a><a href="#movies">Movies</a>
+  </nav>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <p class="eyebrow">THE ORIGINAL SERIES • 2005–2008</p>
+    <h1>HERO TIME<span>.</span></h1>
+    <p class="lead">Explore the original Ben 10 era: the people, aliens, technology and adventures that made the Omnitrix legendary.</p>
+    <div class="hero-actions"><a class="button primary" href="#aliens">Explore the aliens ↓</a><a class="button ghost" href="#characters">Meet the team</a></div>
+    <p class="disclaimer">Fan-made reference project. Not an official Cartoon Network website.</p>
+  </div>
+  <div class="hero-device" aria-hidden="true"><div class="ring ring-one"></div><div class="ring ring-two"></div><div class="dial"><span>✦</span></div><div class="device-label">OMNITRIX<br><small>DNA ACCESS</small></div></div>
+</section>
+
+<section class="section" id="characters">
+  <div class="section-head"><div><p class="eyebrow">THE CREW</p><h2>Characters</h2></div><p>Choose a profile to open the archive entry.</p></div>
+  <div class="filters"><input id="characterSearch" type="search" placeholder="Search characters…" aria-label="Search characters"></div>
+  <div class="card-grid" id="characterGrid"></div>
+</section>
+
+<section class="section dark-section" id="aliens">
+  <div class="section-head"><div><p class="eyebrow">DNA DATABASE</p><h2>Ben’s aliens</h2></div><p>Browse the original transformations and later Classic-era unlocks.</p></div>
+  <div class="filters alien-filters">
+    <input id="alienSearch" type="search" placeholder="Search aliens, powers or species…" aria-label="Search aliens">
+    <select id="alienGroup" aria-label="Filter aliens"><option value="all">All aliens</option><option value="original">Original 10</option><option value="unlock">Later unlocks</option><option value="movie">Movie / special appearances</option></select>
+  </div>
+  <div class="card-grid" id="alienGrid"></div>
+  <p class="note">Continuity note: availability and first appearances can differ between the television episodes and the films. Entries distinguish regular transformations from special or disputed appearances.</p>
+</section>
+
+<section class="section" id="lore">
+  <div class="section-head"><div><p class="eyebrow">HOW IT WORKS</p><h2>The Omnitrix & the universe</h2></div></div>
+  <div class="lore-grid">
+    <article class="lore-card"><span class="lore-icon">⌚</span><h3>The Omnitrix</h3><p>A powerful device that stores alien DNA and lets its wearer transform into sampled species. Ben’s early use is imperfect: he often gets a different alien than expected, and the device has limits.</p></article>
+    <article class="lore-card"><span class="lore-icon">⌁</span><h3>The Plumbers</h3><p>A secret interplanetary peacekeeping organisation. Grandpa Max’s past as a Plumber gives the children access to knowledge, contacts and equipment far beyond an ordinary road trip.</p></article>
+    <article class="lore-card"><span class="lore-icon">◎</span><h3>Alien biology</h3><p>Each transformation has its own strengths, limitations and environmental needs. Choosing the right form matters as much as raw power.</p></article>
+  </div>
+</section>
+
+<section class="section movie-section" id="movies">
+  <div class="section-head"><div><p class="eyebrow">FEATURE-LENGTH ADVENTURES</p><h2>Classic-era movies</h2></div></div>
+  <div class="movie-grid">
+    <article class="movie"><div class="movie-number">01</div><div><h3>Secret of the Omnitrix</h3><p>An animated feature in which the Omnitrix’s self-destruct sequence sends Ben, Gwen and Tetrax searching for Azmuth. It expands the device’s history and introduces important parts of its creator’s story.</p><span class="tag">Animated film • 2007</span></div></article>
+    <article class="movie"><div class="movie-number">02</div><div><h3>Race Against Time</h3><p>A live-action adaptation set after the original series’ summer adventure, featuring Ben, Gwen, Grandpa Max and the threat of Eon. Its continuity differs from the main animated timeline.</p><span class="tag">Live action • 2007</span></div></article>
+    <article class="movie"><div class="movie-number">03</div><div><h3>Destroy All Aliens</h3><p>An animated CGI movie returning to the original-series designs, with Ben’s alien transformations involved in a threat linked to the Omnitrix and the Plumbers.</p><span class="tag">CGI animated film • 2012</span></div></article>
+  </div>
+</section>
+
+<section class="section quiz-teaser">
+  <div><p class="eyebrow">COMING LATER</p><h2>Test your knowledge.</h2><p>The separate test file can include multiple-choice questions, a score, answer explanations and difficulty levels.</p></div>
+  <div class="quiz-mark">?</div>
+</section>
+</main>
+<footer><a class="brand small-brand" href="#home"><span class="omnitrix">✦</span><span>BEN <b>10</b><small>CLASSIC ARCHIVE</small></span></a><p>Unofficial fan reference • Built for learning and exploring the Classic era.</p></footer>
+
+<div class="modal-backdrop" id="modalBackdrop" hidden>
+  <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Close profile">×</button>
+    <p class="eyebrow" id="modalType">ARCHIVE ENTRY</p><h2 id="modalTitle"></h2><p class="modal-subtitle" id="modalSubtitle"></p>
+    <div id="modalBody"></div>
+  </section>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
